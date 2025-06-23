@@ -1,16 +1,19 @@
 ---
 import { Image } from 'astro:assets';
+import Wrapper from './Wrapper.astro';
 
 ---
 
 <header>
-  <Image
-    src="/src/assets/logo.png"
-    alt="Fusion Cup Logo"
-    width={200}
-    height={100}
-    loading="lazy"
-  />
+  <Wrapper>
+    <Image
+      src="/src/assets/logo.png"
+      alt="Fusion Cup Logo"
+      width={200}
+      height={100}
+      loading="lazy"
+    />
+  </Wrapper>
 </header>
 
 <style>
@@ -18,13 +21,11 @@ import { Image } from 'astro:assets';
     background-color: var(--white);
     color: white;
     text-align: center;
-    padding: .5rem 0;
   }
 
   @media (min-width: 480px) {
     header {
       text-align: left;
-      padding: .5rem 3rem;
     }
   }
 </style>

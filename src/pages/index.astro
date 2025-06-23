@@ -1,5 +1,6 @@
 ---
 import Header from "./components/Header.astro";
+import Wrapper from "./components/Wrapper.astro";
 
 ---
 
@@ -16,10 +17,12 @@ import Header from "./components/Header.astro";
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>Bienvenido a Fusion Cup</h1>
-			<p>Pronto más información sobre el evento.</p>
-		</main>
+		<Wrapper>
+			<main>
+				<h1>Bienvenido a Fusion Cup</h1>
+				<p>Pronto más información sobre el evento.</p>
+			</main>
+		</Wrapper>
 	</body>
 </html>
 
