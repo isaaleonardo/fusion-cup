@@ -1,5 +1,5 @@
 ---
-const { classes } = Astro.props;
+const { classes, name } = Astro.props;
 
 // Mock data for standings
 // In a real application, this data would be fetched from an API or database
@@ -11,7 +11,7 @@ const standings = [
 
 <div class={`${classes} standings`}>
   <div class="title">
-    <h2>Grupo A</h2>
+    <h2>{name}</h2>
   </div>
   <div class="standings-list">
     <table>
