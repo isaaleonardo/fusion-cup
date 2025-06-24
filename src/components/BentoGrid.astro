@@ -1,6 +1,7 @@
 ---
 import NextMatch from "./NextMatch.astro";
 import Standings from "./Standings.astro";
+import PlayerStatCard from "./PlayerStatCard.astro";
 
 ---
 <main>
@@ -8,8 +9,20 @@ import Standings from "./Standings.astro";
 		<NextMatch classes="div1" />
 		<Standings classes="div2" name="Grupo A" />
 		<Standings classes="div3" name="Grupo A" />
-    <div class="div4">4</div>
-    <div class="div5">5</div>
+		<PlayerStatCard
+      classes="div4"
+      title="Máximo Goleador"
+      emoji="⚽"
+      name="Pedro Pérez"
+      stat="10 Goles Anotados"
+    />
+    <PlayerStatCard
+      classes="div5"
+      title="Mejor Portero"
+      emoji="🧤"
+      name="Luis López"
+      stat="10 Goles Recibidos"
+    />
     <div class="div6">6</div>
     <div class="div7">7</div>
   </div>
