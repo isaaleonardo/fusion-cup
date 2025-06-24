@@ -1,0 +1,36 @@
+---
+const { classes } = Astro.props
+
+---
+
+<div class={`${classes} standings`}>
+  <div class="title">
+    <h2>Grupo A</h2>
+  </div>
+  <div class="standings-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Pos.</th>
+          <th>PJ</th>
+          <th>DG</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 Modus</td>
+          <td>5</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>2 Hechos</td>
+          <td>5</td>
+          <td>3</td>
+          <td>9</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
