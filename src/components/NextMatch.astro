@@ -36,11 +36,12 @@ const { classes } = Astro.props
   .next-match {
     background-color: var(--white);
     color: var(--primary-color);
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: 1rem;
   }
 
   .next-match > * {
     padding-inline: 1rem;
+		padding: 1rem 1.5rem;
   }
 
   .match {
@@ -50,7 +51,13 @@ const { classes } = Astro.props
   }
 
   .vs {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
+  }
+
+  @media (min-width: 480px) {
+    .next-match {
+      font-size: .8rem;
+    }
   }
 </style>
