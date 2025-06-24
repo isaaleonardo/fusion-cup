@@ -1,5 +1,12 @@
 ---
 const { classes } = Astro.props;
+
+// Mock data for standings
+// In a real application, this data would be fetched from an API or database
+const standings = [
+  { position: 1, team: 'Modus', matchesPlayed: 5, goalDifference: 4, points: 12 },
+  { position: 2, team: 'Hechos', matchesPlayed: 5, goalDifference: 3, points: 9 },
+];
 ---
 
 <div class={`${classes} standings`}>
@@ -17,24 +24,19 @@ const { classes } = Astro.props;
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <span class="position">1</span>
-            Modus
-          </td>
-          <td class="fix-width mobile-hidden">5</td>
-          <td class="fix-width mobile-hidden">4</td>
-          <td class="fix-width">12</td>
-        </tr>
-        <tr>
-          <td>
-            <span class="position">2</span>
-            Hechos
-          </td>
-          <td class="fix-width mobile-hidden">5</td>
-          <td class="fix-width mobile-hidden">3</td>
-          <td class="fix-width">9</td>
-        </tr>
+        {
+          standings.map((standing) => (
+            <tr>
+              <td>
+                <span class="position">{standing.position}</span>
+                {standing.team}
+              </td>
+              <td class="fix-width mobile-hidden">{standing.matchesPlayed}</td>
+              <td class="fix-width mobile-hidden">{standing.goalDifference}</td>
+              <td class="fix-width">{standing.points}</td>
+            </tr>
+          ))
+        }
       </tbody>
     </table>
   </div>
