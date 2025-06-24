@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+
+const { classes } = Astro.props
+
+---
+
+<div class={`${classes} next-match`}>
+  <div class="title">
+    <h2>Próximo Partido</h2>
+  </div>
+  <div class="match">
+    <div class="team1">
+      <Image
+        src="/src/assets/teams/modus.png"
+        alt="Modus Logo"
+        width={100}
+        height={100}
+        loading="lazy"
+      />
+    </div>
+    <div class="vs">vs</div>
+    <div class="team2">
+      <Image
+        src="/src/assets/teams/hechos.png"
+        alt="Hechos Logo"
+        width={100}
+        height={100}
+        loading="lazy"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .next-match {
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
+
+  .next-match > * {
+    padding-inline: 1rem;
+  }
+
+  .match {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .vs {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+</style>

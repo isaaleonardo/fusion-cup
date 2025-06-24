@@ -24,7 +24,7 @@ import BentoGrid from "../components/BentoGrid.astro";
 	</body>
 </html>
 
-<style>
+<style is:global>
 	/* Design System */
 	:root {
 		/* Color Variables */
@@ -47,5 +47,10 @@ import BentoGrid from "../components/BentoGrid.astro";
 		padding: 0;
 		background-color: var(--primary-color);
 		color: var(--white);
+	}
+
+	/* Reset */
+	h2 {
+		margin: 0;
 	}
 </style>
