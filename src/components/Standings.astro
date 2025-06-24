@@ -13,7 +13,7 @@ const { classes } = Astro.props;
           <th>Pos.</th>
           <!-- <th>PJ</th> -->
           <!-- <th>DG</th> -->
-          <th>Pts</th>
+          <th class="fix-width">Pts</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,7 @@ const { classes } = Astro.props;
           </td>
           <!-- <td>5</td> -->
           <!-- <td>4</td> -->
-          <td>12</td>
+          <td class="fix-width">12</td>
         </tr>
         <tr>
           <td>
@@ -33,7 +33,7 @@ const { classes } = Astro.props;
           </td>
           <!-- <td>5</td> -->
           <!-- <td>3</td> -->
-          <td>9</td>
+          <td class="fix-width">9</td>
         </tr>
       </tbody>
     </table>
@@ -82,6 +82,11 @@ const { classes } = Astro.props;
     font-weight: bold;
     display: inline-block;
     width: .8rem;
+  }
+
+  .fix-width {
+    width: 2.25rem;
+    text-align: center;
   }
 
   @media (min-width: 480px) {
