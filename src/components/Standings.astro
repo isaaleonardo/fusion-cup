@@ -1,6 +1,5 @@
 ---
-const { classes } = Astro.props
-
+const { classes } = Astro.props;
 ---
 
 <div class={`${classes} standings`}>
@@ -12,22 +11,22 @@ const { classes } = Astro.props
       <thead>
         <tr>
           <th>Pos.</th>
-          <th>PJ</th>
-          <th>DG</th>
+          <!-- <th>PJ</th> -->
+          <!-- <th>DG</th> -->
           <th>Pts</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1 Modus</td>
-          <td>5</td>
-          <td>4</td>
+          <!-- <td>5</td> -->
+          <!-- <td>4</td> -->
           <td>12</td>
         </tr>
         <tr>
           <td>2 Hechos</td>
-          <td>5</td>
-          <td>3</td>
+          <!-- <td>5</td> -->
+          <!-- <td>3</td> -->
           <td>9</td>
         </tr>
       </tbody>
@@ -44,13 +43,33 @@ const { classes } = Astro.props
   .title {
     background-color: var(--primary-light-color);
     color: var(--white);
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 1rem 1rem 0 0;
+  }
+
+  .standings-list {
+    padding-inline: 0.5rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    color: var(--black-light);
+    border-bottom: 1px solid var(--black-light);
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.5rem;
   }
 
   @media (min-width: 480px) {
     .title {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       border-radius: 1.5rem 1.5rem 0 0;
     }
   }
