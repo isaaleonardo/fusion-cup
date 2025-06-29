@@ -1,14 +1,9 @@
 ---
+import { getNextMatch } from '../services/nextMatches.js';
 import { Image } from 'astro:assets';
 
 const { classes } = Astro.props
-
-// Mock data for teams
-// In a real application, this data would likely come from an API or database
-const teams = [
-  { name: 'Modus', logo: '/src/assets/teams/modus.png' },
-  { name: 'Hechos', logo: '/src/assets/teams/hechos.png' }
-];
+const teams = await getNextMatch();
 
 ---
 
@@ -19,8 +14,8 @@ const teams = [
   <div class="match">
     <div class="team1">
       <Image
-        src={teams[0].logo}
-        alt={`${teams[0].name} Logo`}
+        src={'/src/assets/teams/' + teams.team1.toLowerCase() + '.png'}
+        alt={`${teams.team1} Logo`}
         width={100}
         height={100}
         loading="lazy"
@@ -29,8 +24,8 @@ const teams = [
     <div class="vs">vs</div>
     <div class="team2">
       <Image
-        src={teams[1].logo}
-        alt={`${teams[0].name} Logo`}
+        src={'/src/assets/teams/' + teams.team2.toLowerCase() + '.png'}
+        alt={`${teams.team2} Logo`}
         width={100}
         height={100}
         loading="lazy"
