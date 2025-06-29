@@ -1,12 +1,9 @@
 ---
-const { classes, name } = Astro.props;
+import { SortAndMapGroupStandings } from '../services/standings.js';
 
-// Mock data for standings
-// In a real application, this data would be fetched from an API or database
-const standings = [
-  { position: 1, team: 'Modus', matchesPlayed: 5, goalDifference: 4, points: 12 },
-  { position: 2, team: 'Hechos', matchesPlayed: 5, goalDifference: 3, points: 9 },
-];
+const { classes, name, groupID } = Astro.props;
+
+const standings = await SortAndMapGroupStandings(groupID);
 ---
 
 <div class={`${classes} standings`}>
