@@ -1,10 +1,12 @@
 ---
 import { getPlayerBestGoaler } from "../services/mostGoals.js";
+import { getPlayerWithMostYellowCards } from "../services/mostYellowCards.js";
 import NextMatch from "./NextMatch.astro";
 import Standings from "./Standings.astro";
 import PlayerStatCard from "./PlayerStatCard.astro";
 
 const bestGoaler = await getPlayerBestGoaler();
+const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 
 ---
 <main>
@@ -23,8 +25,8 @@ const bestGoaler = await getPlayerBestGoaler();
       classes="div5"
       title="Más amonestado"
       emoji="🟨"
-      name="Luis López"
-      stat="10 Amarillas Recibidos"
+      name={playerWithMostYellowCards.name}
+      stat={`${playerWithMostYellowCards.total_yellow_cards} Amarillas Recibidas`}
     />
     <div class="div6 empty"></div>
     <div class="div7 empty"></div>
