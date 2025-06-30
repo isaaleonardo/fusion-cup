@@ -1,6 +1,7 @@
 ---
 import { getPlayerBestGoaler } from "../services/mostGoals.js";
 import { getPlayerWithMostYellowCards } from "../services/mostYellowCards.js";
+import { Image } from 'astro:assets';
 import NextMatch from "./NextMatch.astro";
 import Standings from "./Standings.astro";
 import PlayerStatCard from "./PlayerStatCard.astro";
@@ -28,8 +29,17 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
       name={playerWithMostYellowCards.name}
       stat={`${playerWithMostYellowCards.total_yellow_cards} Amarillas Recibidas`}
     />
-    <div class="div6 empty"></div>
-    <div class="div7 empty"></div>
+    <div class="div6 empty">
+			<Image
+        src='/src/assets/ilustrations/man_kicking.png'
+        alt='Ilustración de fútbol'
+        width={80}
+        height={80}
+        loading="lazy"
+      />
+		</div>
+    <a class="div7 empty">
+		</a>
   </div>
 </main>
 
@@ -41,7 +51,7 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 
 	.parent {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);100%
 		grid-auto-flow: row;
 		gap: .5rem;
 	}
@@ -83,6 +93,17 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 	.div7 {
 		grid-column: 2;
 		grid-row: 4;
+	}
+
+	.div6 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 80%;
+			height: 80%;
+		}
 	}
 
   @media (min-width: 480px) {
