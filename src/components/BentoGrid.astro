@@ -1,7 +1,10 @@
 ---
+import { getPlayerBestGoaler } from "../services/mostGoals.js";
 import NextMatch from "./NextMatch.astro";
 import Standings from "./Standings.astro";
 import PlayerStatCard from "./PlayerStatCard.astro";
+
+const bestGoaler = await getPlayerBestGoaler();
 
 ---
 <main>
@@ -13,15 +16,15 @@ import PlayerStatCard from "./PlayerStatCard.astro";
       classes="div4"
       title="Máximo Goleador"
       emoji="⚽"
-      name="Pedro Pérez"
-      stat="10 Goles Anotados"
+      name={bestGoaler.name}
+      stat={`${bestGoaler.total_goals} Goles Anotados`}
     />
     <PlayerStatCard
       classes="div5"
-      title="Mejor Portero"
-      emoji="🧤"
+      title="Más amonestado"
+      emoji="🟨"
       name="Luis López"
-      stat="10 Goles Recibidos"
+      stat="10 Amarillas Recibidos"
     />
     <div class="div6 empty"></div>
     <div class="div7 empty"></div>
