@@ -38,8 +38,18 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
         loading="lazy"
       />
 		</div>
-    <a class="div7 empty">
-		</a>
+		<div class="div7 empty">
+			<a href="https://instagram.com/fusioncup2025" target="_blank" rel="noopener noreferrer">
+				<Image
+					src='/src/assets/icons/instagram.png'
+					alt='Instagram Logo'
+					width={80}
+					height={80}
+					loading="lazy"
+				/>
+				<span>@fusioncup2025</span>
+			</a>
+		</div>
   </div>
 </main>
 
@@ -89,6 +99,17 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 		grid-column: 1;
 		grid-row: 4;
 	}
+	
+	.div6 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 80%;
+			height: 80%;
+		}
+	}
 
 	.div7 {
 		grid-column: 2;
@@ -103,6 +124,20 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 		img {
 			width: 80%;
 			height: 80%;
+		}
+	}
+
+	.div7 {
+		padding: 5px;
+		
+		a {
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			gap: .5rem;
+			text-decoration: none;
+			color: var(--white-color);
 		}
 	}
 
