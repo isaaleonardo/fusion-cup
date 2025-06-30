@@ -14,7 +14,7 @@ const standings = await SortAndMapGroupStandings(groupID);
     <table>
       <thead>
         <tr>
-          <th>Pos.</th>
+          <th>Posición</th>
           <th class="fix-width mobile-hidden">PJ</td>
           <th class="fix-width mobile-hidden">DG</th>
           <th class="fix-width">Pts</th>
@@ -87,6 +87,8 @@ const standings = await SortAndMapGroupStandings(groupID);
     font-weight: bold;
     display: inline-block;
     width: .8rem;
+    /* border-inline-end: 1px solid var(--black-light); */
+    margin-inline-end: .1rem;
   }
 
   .fix-width {
