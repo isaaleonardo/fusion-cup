@@ -27,7 +27,7 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
       title="Más Amonestado"
       emoji="🟨"
       name={playerWithMostYellowCards.name}
-      stat={`${playerWithMostYellowCards.total_yellow_cards} Amarillas Recibidas`}
+      stat={`${playerWithMostYellowCards.total_yellow_cards} Tarjetas Amarillas`}
     />
     <div class="div6 empty">
 			<Image
@@ -124,6 +124,8 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 		img {
 			width: 80%;
 			height: 80%;
+			max-width: 260px;
+			max-height: 260px;
 		}
 	}
 
@@ -133,6 +135,7 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 		a {
 			display: flex;
 			height: 100%;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			gap: .5rem;
