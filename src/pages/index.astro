@@ -27,6 +27,8 @@ import BentoGrid from "../components/BentoGrid.astro";
 <style is:global>
 	/* Design System */
 	:root {
+		font-size: 12px;
+
 		/* Color Variables */
 		--primary-color: #2E0C40;
 		--primary-light-color: #642E7B;
@@ -54,5 +56,17 @@ import BentoGrid from "../components/BentoGrid.astro";
 	/* Reset */
 	h2 {
 		margin: 0;
+	}
+
+	@media (min-width: 375px) {
+		:root {
+			font-size: 14px;
+		}
+	}
+
+	@media (min-width: 425px) {
+		:root {
+			font-size: 16px;
+		}
 	}
 </style>
