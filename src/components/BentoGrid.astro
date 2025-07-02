@@ -12,21 +12,19 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 ---
 <main>
   <div class="flex-container">
-		<NextMatch classes="div1" />
+		<NextMatch />
 		<div class="flex-container--standings">
-			<Standings classes="div2" name="Grupo A" groupID="1" />
-			<Standings classes="div3" name="Grupo B" groupID="2" />
+			<Standings name="Grupo A" groupID="1" />
+			<Standings name="Grupo B" groupID="2" />
 		</div>
 		<div class="flex-container--stats">
 			<PlayerStatCard
-				classes="div4"
 				title="Máximo Goleador"
 				emoji="⚽"
 				name={bestGoaler.name}
 				stat={`${bestGoaler.total_goals} Goles Anotados`}
 			/>
 			<PlayerStatCard
-				classes="div5"
 				title="Más Amonestado"
 				emoji="🟨"
 				name={playerWithMostYellowCards.name}

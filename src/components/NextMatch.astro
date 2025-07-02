@@ -2,12 +2,11 @@
 import { getNextMatch } from '../services/nextMatches.js';
 import { Image } from 'astro:assets';
 
-const { classes } = Astro.props
 const teams = await getNextMatch();
 
 ---
 
-<div class={`${classes} next-match`}>
+<div class="next-match">
   <div class="title">
     <h2>Próximo Partido</h2>
   </div>

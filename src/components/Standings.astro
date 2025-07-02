@@ -1,12 +1,12 @@
 ---
 import { SortAndMapGroupStandings } from '../services/standings.js';
 
-const { classes, name, groupID } = Astro.props;
+const { name, groupID } = Astro.props;
 
 const standings = await SortAndMapGroupStandings(groupID);
 ---
 
-<div class={`${classes} standings`}>
+<div class="standings">
   <div class="title">
     <h2>{name}</h2>
   </div>
