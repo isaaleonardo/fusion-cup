@@ -1,10 +1,9 @@
 ---
-const { title, emoji, name, stat } = Astro.props;
+const { title, name, stat } = Astro.props;
 ---
 <div class="player-stat-card">
   <div class="title">{title}</div>
   <div class="body">
-    <span class="emoji">{emoji}</span>
     <span class="name">
       {
         name.split(' ').map((word) => (
@@ -20,7 +19,7 @@ const { title, emoji, name, stat } = Astro.props;
   .player-stat-card {
     background-color: var(--primary-light-color);
     color: var(--white);
-    font-size: 1rem;
+    font-size: .8rem;
   }
   
   .player-stat-card > * {
@@ -47,10 +46,6 @@ const { title, emoji, name, stat } = Astro.props;
   .body > * {
     display: inline-block;
     text-align: center;
-  }
-
-  .emoji {
-    font-size: 2rem;
   }
 
   .value {

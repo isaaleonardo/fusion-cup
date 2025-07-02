@@ -20,13 +20,11 @@ const playerWithMostYellowCards = await getPlayerWithMostYellowCards()
 		<div class="flex-container--stats">
 			<PlayerStatCard
 				title="Máximo Goleador"
-				emoji="⚽"
 				name={bestGoaler.name}
 				stat={`${bestGoaler.total_goals} Goles Anotados`}
 			/>
 			<PlayerStatCard
 				title="Más Amonestado"
-				emoji="🟨"
 				name={playerWithMostYellowCards.name}
 				stat={`${playerWithMostYellowCards.total_yellow_cards} Tarjetas Amarillas`}
 			/>
