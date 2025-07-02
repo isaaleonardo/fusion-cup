@@ -14,7 +14,7 @@ const teams = await getNextMatch();
   <div class="match">
     <div class="team1">
       <Image
-        src={'/src/assets/teams/' + teams.team1.toLowerCase() + '.png'}
+        src={'/public/assets/teams/' + teams.team1.toLowerCase() + '.png'}
         alt={`${teams.team1} Logo`}
         width={100}
         height={100}
@@ -24,7 +24,7 @@ const teams = await getNextMatch();
     <div class="vs">vs</div>
     <div class="team2">
       <Image
-        src={'/src/assets/teams/' + teams.team2.toLowerCase() + '.png'}
+        src={'/public/assets/teams/' + teams.team2.toLowerCase() + '.png'}
         alt={`${teams.team2} Logo`}
         width={100}
         height={100}
