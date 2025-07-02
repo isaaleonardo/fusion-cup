@@ -5,7 +5,13 @@ const { classes, title, emoji, name, stat } = Astro.props;
   <div class="title">{title}</div>
   <div class="body">
     <span class="emoji">{emoji}</span>
-    <span class="name">{name}</span>
+    <span class="name">
+      {
+        name.split(' ').map((word) => (
+          <span>{word}<br/></span>
+        ))
+      }
+    </span>
   </div>
   <div class="value">{stat}</div>
 </div>
